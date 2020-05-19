@@ -8,7 +8,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/login', function(req, res) {
   let usuario = req.body.inputEmail;
+  console.log(usuario);
   let clave = req.body.inputPassword;
+  console.log(clave);
   if (usuario != "" && clave == "tecsup") {
     res.app.locals.usuario = req.body.inputEmail;
     res.redirect('/dashboard');
